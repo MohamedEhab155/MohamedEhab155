@@ -108,7 +108,7 @@ Led a team of 5 engineers building a full AI-powered smart parking system from C
 </td>
 <td width="50%" valign="top">
 
-### 🏭 Computer Vision @ OZ_Tech & RMG
+### 🏭 AI Engineer @ OZ_Tech & RMG
 **Production CV Pipelines**
 
 Developed and deployed real-world object detection & segmentation models for two companies simultaneously.
