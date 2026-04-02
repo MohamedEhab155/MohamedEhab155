@@ -1,9 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=Mohamed%20Ehab&fontSize=50&fontColor=ffffff&fontAlignY=35&desc=AI%20Engineer%20%7C%20Arabic%20NLP%20Specialist%20%7C%20MLOps&descAlignY=55&descSize=18&descColor=a0aec0" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=Mohamed%20Ehab&fontSize=50&fontColor=ffffff&fontAlignY=35&desc=AI%20Engineer%20%7C%20Computer%20Vision%20%C2%B7%20NLP%20%C2%B7%20LLMs%20%7C%20Building%20End-to-End%20AI%20Systems%20from%20Research%20to%20Production&descAlignY=55&descSize=18&descColor=a0aec0" width="100%"/>
 
 <br/>
 
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=6C63FF&center=true&vCenter=true&width=700&lines=Building+AI+that+ships+to+production;Arabic+NLP+%7C+LLMs+%7C+Computer+Vision;From+raw+data+to+cloud+deployment;Fine-tuning+LLMs+at+zero+inference+cost)](https://git.io/typing-svg)
 
 
 <br/>
