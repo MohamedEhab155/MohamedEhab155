@@ -1,116 +1,238 @@
-# Hi, I'm Mohamed Ehab 👋
+<div align="center">
 
-AI Engineer based in Cairo, Egypt. I build things that actually run in production — not just notebooks.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=Mohamed%20Ehab&fontSize=50&fontColor=ffffff&fontAlignY=35&desc=AI%20Engineer%20%7C%20Arabic%20NLP%20Specialist%20%7C%20MLOps&descAlignY=55&descSize=18&descColor=a0aec0" width="100%"/>
 
-My work sits at the intersection of model training, backend engineering, and deployment infrastructure. I care about the full picture: how data gets collected, how models get trained, how they get served, and whether the system holds up under real load.
+<br/>
 
-Native Arabic speaker — which shapes a lot of what I build. Bilingual NLP, Arabic OCR pipelines, Arabic-specific fine-tuning.
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=6C63FF&center=true&vCenter=true&width=700&lines=Building+AI+that+ships+to+production;Arabic+NLP+%7C+LLMs+%7C+Computer+Vision;From+raw+data+to+cloud+deployment;Fine-tuning+LLMs+at+zero+inference+cost)](https://git.io/typing-svg)
 
-<br>
+<br/>
 
-📧 [mohamed.ehab.ai.cv@gmail.com](mailto:mohamed.ehab.ai.cv@gmail.com) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/mohamed-ehab-4a190022b/) &nbsp;·&nbsp; Cairo, Egypt 🇪🇬
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_LINK)
+[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mohamed.ehab.ai.cv@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_USERNAME)
+![Profile Views](https://komarev.com/ghpvc/?username=YOUR_USERNAME&style=for-the-badge&color=6C63FF&label=PROFILE+VIEWS)
 
----
-
-## 🚀 Projects
-
-### RAG System — Bilingual Production API
-*FastAPI · PostgreSQL · Qdrant · PgVector · Docker · Azure · GitHub Actions · Prometheus · Grafana · Nginx · Alembic*
-
-A bilingual Arabic/English RAG API I built from scratch — the kind that handles real traffic, not just curl requests in a demo.
-
-- LLM backend (OpenAI GPT / Cohere Command-R+) is swappable via environment config, no code changes needed. Same idea for the vector store — Qdrant or PgVector (HNSW), switched at runtime through a factory
-- OCR runs in parallel across pages using `ThreadPoolExecutor`, with Mistral OCR and Gemini Vision covering scanned PDFs, embedded images, and mixed Arabic/English content
-- Deployed on Azure with separate CI/CD pipelines for `develop` and `main`, 8 Docker Compose services behind Nginx, full Prometheus + Grafana observability
-
-Average end-to-end response time: **~902ms**. Still optimizing.
-
-[View on GitHub →](https://github.com/MohamedEhab155/RAG-System)
+</div>
 
 ---
 
-### ArabicLLM — Fine-tuning Qwen2.5 on Arabic News
-*PyTorch · Hugging Face · LLaMA-Factory · vLLM · Streamlit · W&B · Pydantic · Locust*
+## 👨‍💻 About Me
 
-I wanted to see how far a small model could go on Arabic NLP tasks if you train it right — NER, summarization, keyword extraction, categorization. The short answer: pretty far.
+```python
+class MohamedEhab:
+    def __init__(self):
+        self.role        = "AI Engineer"
+        self.location    = "Cairo, Egypt 🇪🇬"
+        self.education   = "B.Sc. Computer Science — AI Dept., Zagazig University (2025)"
+        self.languages   = ["Arabic (Native)", "English (Conversational)"]
+        self.speciality  = "Arabic NLP · LLMs · Computer Vision · MLOps"
 
-- Used GPT-4o as a teacher model to generate labeled training data from raw Arabic news, with outputs validated against Pydantic v2 schemas
-- Fine-tuned Qwen2.5-1.5B with LoRA (rank 64) via LLaMA-Factory — 3 epochs, lr 2e-4, tracked on W&B
-- Deployed with vLLM on an NVIDIA T4 — LoRA adapters hot-load without restart
-- Live Streamlit UI with SSE token streaming over an OpenAI-compatible endpoint
-- Load-tested with Locust at 20 concurrent users — ~14s latency at 4096-token context, acceptable for the hardware
+    def current_focus(self):
+        return [
+            "Fine-tuning Arabic LLMs with GPT-4o knowledge distillation",
+            "Production RAG systems with sub-second bilingual retrieval",
+            " Self-hosted LLM inference at zero per-request cost",
+            " Real-time Computer Vision on edge devices",
+        ]
 
-The point was **zero per-request cost at inference**. No GPT-4o calls in production.
-
-*Repo coming soon*
-
----
-
-### Smart Parking System — Graduation Project *(🏅 Best Project Award)*
-*YOLOv11 · PyTorch · OpenCV · Tesseract OCR · FastAPI · MySQL*
-
-Led a team of 4–5 engineers on my graduation project — task splitting, faculty coordination, and making sure we actually shipped. Ended up winning best project in the college.
-
-- Trained YOLOv11 on a custom 2,640-image annotated dataset — **94.2% training accuracy**, 91.8% validation, ~50ms inference per image
-- Full pipeline: YOLO detection → Tesseract OCR → structured vehicle lookup
-- FastAPI backend with real-time parking availability, vehicle sessions, and lookup
-
-[View on GitHub →](https://github.com/youssefibrahim258/Smart-Parking)
+    def what_drives_me(self):
+        return "Bridging the gap between AI research and real-world systems"
+```
 
 ---
 
-## 🛠️ Skills
+##  Featured Projects
 
-**Languages** — Python, SQL
+<table>
+<tr>
+<td width="50%" valign="top">
 
-**ML / DL** — PyTorch · TensorFlow · Hugging Face Transformers · scikit-learn · LLaMA-Factory · vLLM · LangChain
+###  RAG System
+**Production-grade Bilingual RAG API**
 
-**Computer Vision** — YOLO (v11, v12) · OpenCV · ResNet · ViT · detection, segmentation, classification, real-time inference, embedded hardware integration
+A fully async, provider-agnostic RAG system supporting Arabic & English — built for real production workloads.
 
-**NLP / LLMs** — Fine-tuning · RAG · Knowledge distillation · Prompt engineering · Structured output extraction · Bilingual Arabic/English pipelines
+**Highlights:**
+-  **902ms** average end-to-end response time
+-  Dual vector DB: **Qdrant** + **PgVector** (switch via env config, zero code change)
+-  Parallelized OCR pipeline for scanned PDFs & mixed Arabic/English docs
+-  Full observability: **Prometheus + Grafana** across 8 Docker services
+-  Deployed on **Azure** with CI/CD via GitHub Actions
 
-**Backend** — FastAPI · SQLAlchemy (async) · Pydantic · Streamlit
+**Stack:**
+`FastAPI` `PostgreSQL` `Qdrant` `PgVector` `Azure` `Docker` `Nginx` `Alembic` `asyncpg`
 
-**MLOps** — Docker · GitHub Actions · Prometheus · Grafana · Weights & Biases · Alembic · Nginx
+[![Repo](https://img.shields.io/badge/View_Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/YOUR_USERNAME/rag-system)
 
-**Cloud / Databases** — Microsoft Azure · AWS · PostgreSQL · Qdrant · PgVector · asyncpg
+</td>
+<td width="50%" valign="top">
 
-**Tools** — Git · Kaggle · Colab · Jupyter · VS Code · Locust
+###  ArabicLLM
+**Arabic News NLP Fine-Tuning**
+
+Fine-tuned **Qwen2.5-1.5B** on Arabic news tasks using GPT-4o as teacher model — achieving GPT-4o-quality output at zero inference cost.
+
+**Highlights:**
+-  Knowledge distillation pipeline with **Pydantic v2** validated outputs
+-  **vLLM** production server with LoRA hot-loading on NVIDIA T4
+-  **14s** latency at 4096-token context · validated under 20 concurrent users
+-  Full experiment tracking on **Weights & Biases** across 3 epochs
+-  Live **Streamlit** UI with real-time token streaming
+
+**Stack:**
+`Qwen2.5` `LLaMA-Factory` `vLLM` `LoRA` `Streamlit` `W&B` `Locust` `GPT-4o`
+
+[![Repo](https://img.shields.io/badge/View_Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/YOUR_USERNAME/arabicllm)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### Smart Parking System
+**Graduation Project — Team Lead** *(Top Project in Faculty)*
+
+Led a team of 5 engineers building a full AI-powered smart parking system from CV model to mobile app.
+
+**Highlights:**
+-  Recognized as **one of the best graduation projects** in the college
+-  **YOLOv11** license plate detection — 94.2% train / 91.8% val accuracy
+-  **~50ms** inference time per image
+-  Full mobile/web app with real-time parking availability & session tracking
+-  Tesseract OCR pipeline integrated with YOLO detections
+
+**Stack:**
+`YOLOv11` `Tesseract` `FastAPI` `Python` `OpenCV`
+
+[![Repo](https://img.shields.io/badge/View_Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/YOUR_USERNAME/smart-parking)
+
+</td>
+<td width="50%" valign="top">
+
+### 🏭 Computer Vision @ OZ_Tech & RMG
+**Production CV Pipelines**
+
+Developed and deployed real-world object detection & segmentation models for two companies simultaneously.
+
+**Highlights:**
+-  **>90% Precision · 87% Recall** with YOLOv12 across production projects
+-  Managed full ML lifecycle: data collection → annotation → training → deployment
+-  Integrated CV models with **Arduino** hardware for real-time edge inference
+-  Cross-functional collaboration across AI, hardware, and ops teams
+
+**Stack:**
+`YOLOv12` `YOLOv11` `OpenCV` `PyTorch` `Arduino` `Python`
+
+</td>
+</tr>
+</table>
 
 ---
 
-## 💼 Experience
+##  Tech Stack & Skills
 
-**AI Engineer Intern — OZ_Tech** · Cairo *(Feb – Jul 2025)*
-Real Computer Vision work using YOLOv12 — detection and segmentation across multiple projects, full pipeline from annotation through deployment. Also integrated models with Arduino-based embedded hardware, which pushed me into territory beyond pure ML.
+### Machine Learning & Deep Learning
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 
-**AI Engineer Intern — RMG** · Remote, Saudi Arabia *(Feb – May 2025)*
-Worked remotely with a cross-functional AI team. Trained and deployed CV models from early research through production handoff across multiple concurrent projects.
+`Supervised Learning` `Unsupervised Learning` `Transfer Learning` `Fine-Tuning` `Knowledge Distillation` `Hyperparameter Tuning` `Experiment Tracking`
+
+###  LLMs & NLP
+![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+
+`vLLM` `LLaMA-Factory` `LoRA` `RAG Pipeline` `Prompt Engineering` `Arabic NLP` `Structured Output Extraction` `Sequence Modeling`
+
+###  Computer Vision
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
+
+`YOLO v11/v12` `ResNet` `ViT` `Object Detection` `Segmentation` `Image Classification` `Real-Time Inference` `Edge Deployment` `Data Annotation`
+
+### Backend & APIs
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+
+`SQLAlchemy` `asyncpg` `Async Processing` `REST APIs` `Provider-Agnostic Design`
+
+###  Databases & Vector Stores
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+
+`Qdrant` `PgVector` `Alembic` `HNSW Indexing` `JSONB` `Async SQLAlchemy`
+
+### MLOps, Cloud & Infrastructure
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![Azure](https://img.shields.io/badge/Microsoft_Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
+![Weights & Biases](https://img.shields.io/badge/W%26B-FFBE00?style=for-the-badge&logo=weightsandbiases&logoColor=black)
+
+###  Tools
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 ---
 
-## 🎓 Education & Certifications
+##  GitHub Stats
 
-**B.Sc. Computer Science — AI Department** &nbsp;·&nbsp; Zagazig University &nbsp;·&nbsp; *July 2025*
+<div align="center">
 
-| Course | Provider | Note |
-|---|---|---|
-| Mastering DSA | ScSkilled — Dr. Mostafa Saad | Advanced problem-solving & data structures |
-| Mastering ML & Deep Learning | ScSkilled — Dr. Mostafa Saad | End-to-end ML/DL workflows |
-| NLP and LLMs | Stanford Online | Transformers, fine-tuning, RAG |
-| ML Professional Training | Creativa Ismailiya | Industry workflows · **Grade: 98%** |
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"/>
 
----
+</div>
 
-## 📊 GitHub Stats
+<div align="center">
 
-<p>
-  <img src="https://github-readme-stats.vercel.app/api?username=MohamedEhab155&show_icons=true&theme=default&hide_border=true&count_private=true" height="150"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MohamedEhab155&layout=compact&theme=default&hide_border=true" height="150"/>
-</p>
+[![GitHub Streak](https://streak-stats.demolab.com?user=YOUR_USERNAME&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
 
-![](https://komarev.com/ghpvc/?username=MohamedEhab155&style=flat-square&color=grey)
+</div>
 
 ---
 
-**Arabic** — native &nbsp;·&nbsp; **English** — professional
+## Education & Certifications
+
+| | |
+|---|---|
+|  | **B.Sc. Computer Science — AI Department**, Zagazig University *(2021 – 2025)* |
+|  | **AWS AI Practitioner Certificate**, Manara *(2026)* |
+|  | **CS224N: NLP with Deep Learning**, Stanford University *(2025 – 2026)* |
+|  | **Mastering Deep Learning**, ScSkilled — Dr. Mostafa Saad *(2024 – 2026)* |
+|  | **Machine Learning Diploma**, ScSkilled — Dr. Mostafa Saad *(2023 – 2024)* |
+
+---
+
+##  Experience
+
+** OZ_Tech** — AI Intern *(Part-time · Feb 2025 – Jul 2025 · Cairo)*
+> YOLOv12 object detection & segmentation · >90% Precision · Arduino edge integration · End-to-end ML pipelines
+
+** RMG (Saudi Company)** — AI Intern *(Full-time · Feb 2025 – May 2025 · Cairo)*
+> Production CV model deployment · Cross-functional AI team collaboration · Full project lifecycle from research to deployment
+
+---
+
+<div align="center">
+
+###  Let's Connect
+
+*Open to full-time AI Engineer roles — Remote or Cairo-based*
+
+[![LinkedIn](https://img.shields.io/badge/Let's_Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_LINK)
+[![Email](https://img.shields.io/badge/Send_Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mohamed.ehab.ai.cv@gmail.com)
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=100&section=footer" width="100%"/>
+
+</div>
